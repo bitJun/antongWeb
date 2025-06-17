@@ -56,7 +56,7 @@
           class="home_view_banner"
         >
           <img
-            :src="isMobile ? '/home/banner_mb3.png' : '/home/banner3.jpg'"
+            :src="isMobile ? '/home/banner_mb3.png' : '/home/banner3.png'"
             class="home_view_banner_img"
           />
           <div class="home_view_banner_box2">
