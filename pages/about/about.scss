@@ -1,0 +1,301 @@
+.about_view {
+  margin-top: -8.5rem;
+  &_section {
+    position: relative;
+    &_img {
+      width: 100%;
+      height: auto;
+    }
+    &_main {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+    &_tip {
+      color: #999;
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+    }
+    &_title {
+      font-family: Roboto;
+      font-weight: 500;
+      font-size: 4rem;
+      line-height: 4.8rem;
+      margin-bottom: 1rem;
+      color: #323232;
+    }
+    &_desc {
+      color: #999;
+      font-family: Roboto;
+      font-weight: 400;
+      font-size: 1.6rem;
+      line-height: 2rem;
+    }
+  }
+  &_box {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    &_main {
+      width: 80%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 3rem;
+      padding: 8rem 0;
+      &_desc {
+        width: 40%;
+        &_title {
+          font-family: Roboto;
+          font-weight: 700;
+          font-size: 2.8rem;
+          line-height: 4rem;
+          letter-spacing: 0%;
+          margin-bottom: 3rem;
+          color: #1F1F1F;
+        }
+        &_tip {
+          font-family: Roboto;
+          font-weight: 400;
+          font-size: 1.6rem;
+          line-height: 2.6rem;
+          color: gray;
+        }
+      }
+      &_img {
+        width: 40%;
+        height: auto;
+      }
+    }
+    &_section {
+      background: #a8c4d3;
+      width: 100%;
+      padding: 8rem 0;
+    }
+    &_mains {
+      width: 80%;
+      display: flex;
+      justify-content: space-between;
+      margin: 0 auto;
+      align-items: center;
+      &_desc {
+        width: 40%;
+        &_title {
+          font-family: Roboto;
+          font-weight: 700;
+          font-size: 2.8rem;
+          line-height: 4rem;
+          letter-spacing: 0%;
+          margin-bottom: 3rem;
+          color: #1F1F1F;
+        }
+        &_tip {
+          font-family: Roboto;
+          font-weight: 400;
+          font-size: 1.6rem;
+          line-height: 2.6rem;
+          color: gray;
+        }
+      }
+      &_img {
+        width: 40%;
+        height: auto;
+      }
+    }
+    &_line {
+      background: #ffffff;
+      height: 1rem;
+      width: 100%;
+    }
+    &_container {
+      background: #edeef3;
+      padding: 6rem 0;
+      width: 100%;
+      &_title {
+        color: #333;
+        font-size: 3.2rem;
+        line-height: 4rem;
+        text-align: center;
+        margin-bottom: 3rem;
+      }
+      &_swiper {
+        width: 80%;
+        margin: 0 auto;
+        &_item {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          &_img {
+            width: 24rem;
+            height: 29.3rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .about_view {
+    margin-top: 0rem;
+    &_section {
+      position: relative;
+      background-image: url('/about/bg.png');
+      background-size: cover;
+      height: 25rem;
+      &_img {
+        width: 100%;
+        height: auto;
+        display: none;
+      }
+      &_main {
+        position: static;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 0 1.6rem;
+        box-sizing: border-box;
+      }
+      &_tip {
+        color: #999;
+        font-size: 1.6rem;
+        margin-bottom: 1rem;
+      }
+      &_title {
+        font-family: Roboto;
+        font-weight: 500;
+        font-size: 2rem;
+        line-height: 2.5rem;
+        margin-bottom: 1rem;
+        color: #323232;
+      }
+      &_desc {
+        color: #999;
+        font-family: Roboto;
+        font-weight: 400;
+        font-size: 1.6rem;
+        line-height: 2rem;
+      }
+    }
+    &_box {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      &_main {
+        width: 100%;
+        display: flex;
+        margin-bottom: 1rem;
+        flex-direction: column;
+        padding: 2rem 0;
+        &_desc {
+          width: 100%;
+          &_title {
+            font-family: Roboto;
+            font-weight: 700;
+            font-size: 1.8rem;
+            line-height: 2.4rem;
+            letter-spacing: 0%;
+            margin-bottom: 1.5rem;
+            color: #1F1F1F;
+            text-align: center;
+          }
+          &_tip {
+            font-family: Roboto;
+            font-weight: 400;
+            font-size: 1.2rem;
+            line-height: 1.8rem;
+            padding: 0 1.6rem;
+            margin-bottom: 1.5rem;
+            color: gray;
+          }
+        }
+        &_img {
+          width: 100%;
+          height: auto;
+        }
+      }
+      &_section {
+        background: #a8c4d3;
+        width: 100%;
+        padding: 2rem 0;
+      }
+      &_mains {
+        width: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+        margin: 0 auto;
+        &_desc {
+          width: 100%;
+          &_title {
+            font-family: Roboto;
+            font-weight: 700;
+            font-size: 1.8rem;
+            line-height: 2.4rem;
+            letter-spacing: 0%;
+            margin-bottom: 1.5rem;
+            color: #1F1F1F;
+            text-align: center;
+          }
+          &_tip {
+            font-family: Roboto;
+            font-weight: 400;
+            font-size: 1.2rem;
+            line-height: 1.8rem;
+            padding: 0 1.6rem;
+            margin-bottom: 1.5rem;
+            color: gray;
+          }
+        }
+        &_img {
+          width: 100%;
+          height: auto;
+        }
+      }
+      &_line {
+        background: #ffffff;
+        height: 0.5rem;
+        width: 100%;
+      }
+      &_container {
+        background: #edeef3;
+        padding: 2rem 0;
+        width: 100%;
+        &_title {
+          color: #333;
+          font-size: 1.8rem;
+          line-height: 4rem;
+          text-align: center;
+          margin-bottom: 1.5rem;
+        }
+        &_swiper {
+          width: 100%;
+          margin: 0 auto;
+          &_item {
+            &_img {
+              width: 100%;
+              height: auto;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+::v-deep .swiper-button-next,
+::v-deep .swiper-button-prev {
+  color: #0a6250; /* ← 修改为你想要的颜色，比如 red, #fff, etc. */
+}
