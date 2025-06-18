@@ -419,7 +419,6 @@ const scrollToTop = (smooth = true) => {
             src="/email1.png"
             class="footer_box_content_info_icon"
           />
-          服务邮箱
         </div>
         <p class="footer_box_content_email">public@antoralife.com</p>
         <div class="footer_box_content_list">
