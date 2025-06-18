@@ -2,9 +2,18 @@
   margin-top: -8.5rem;
   &_bg {
     width: 100%;
+    position: relative;
     &_img {
       width: 100%;
       height: auto;
+    }
+    &_desc {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      color: #CDFEFF;
+      font-size: 2rem;
     }
   }
   &_position {

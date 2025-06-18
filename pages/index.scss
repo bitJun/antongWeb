@@ -9,7 +9,7 @@
     position: relative;
     &_img {
       width: 100%;
-      height: max-content;
+      height: auto;
     }
     &_box {
       position: absolute;
@@ -118,8 +118,9 @@
         background: #0a6250;
       }
     }
-    &_box3 {position: absolute;
-      width: 15%;
+    &_box3 {
+      position: absolute;
+      width: 25%;
       left: 50%;
       display: flex;
       flex-direction: column;
@@ -158,7 +159,7 @@
     position: relative;
     &_img {
       width: 100%;
-      height: max-content;
+      height: auto;
     }
     &_main {
       position: absolute;
@@ -250,7 +251,7 @@
     position: relative;
     &_img {
       width: 100%;
-      height: max-content;
+      height: auto;
     }
     &_main {
       position: absolute;
@@ -665,12 +666,4 @@
       text-align: left;
     }
   }
-}
-
-:deep(.swiper .swiper-button-next) {
-  color: #0a6250 !important;
-}
-::v-deep .swiper .swiper-button-next,
-::v-deep .swiper .swiper-button-prev {
-  color: #0a6250 !important; /* ← 修改为你想要的颜色，比如 red, #fff, etc. */
 }

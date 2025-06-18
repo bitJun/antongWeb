@@ -190,7 +190,7 @@ const scrollToTop = (smooth = true) => {
               <NuxtLink
                 class="header_nav_item_box_item"
                 activeClass="active"
-                to="/product/oxygen"
+                to="/product/home"
               >
                 {{t('product.p1_title')}}
               </NuxtLink>

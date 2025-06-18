@@ -162,7 +162,7 @@ const scrollToHash = () => {
       console.log('target', target);
       target?.scrollIntoView({
         behavior: 'smooth',   // 平滑滚动
-        block: 'nearest'
+        block: 'start'
       });
     }, 100);
   }

@@ -5,6 +5,7 @@
         src="/product/bg.png"
         class="product_view_bg_img"
       >
+      <p class="product_view_bg_desc">VIP {{t('home.subtitle')}}</p>
     </div>
     <div class="product_view_position" id="position">
       <div class="product_view_position_main">
@@ -93,7 +94,7 @@ const scrollToHash = () => {
       console.log('target', target);
       target?.scrollIntoView({
         behavior: 'smooth',   // 平滑滚动
-        block: 'nearest'
+        block: 'start'
       });
     }, 100);
   }

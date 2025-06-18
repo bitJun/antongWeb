@@ -18,7 +18,7 @@
       flex-direction: column;
     }
     &_tip {
-      color: #999;
+      color: #323232;
       font-size: 1.6rem;
       margin-bottom: 1rem;
     }
@@ -31,7 +31,7 @@
       color: #323232;
     }
     &_desc {
-      color: #999;
+      color: #oxygen;
       font-family: Roboto;
       font-weight: 400;
       font-size: 1.6rem;
@@ -59,14 +59,14 @@
           line-height: 4rem;
           letter-spacing: 0%;
           margin-bottom: 3rem;
-          color: #1F1F1F;
+          color: #323232;
         }
         &_tip {
           font-family: Roboto;
           font-weight: 400;
           font-size: 1.6rem;
           line-height: 2.6rem;
-          color: gray;
+          color: #323232;
         }
       }
       &_img {
@@ -94,14 +94,14 @@
           line-height: 4rem;
           letter-spacing: 0%;
           margin-bottom: 3rem;
-          color: #1F1F1F;
+          color: #323232;
         }
         &_tip {
           font-family: Roboto;
           font-weight: 400;
           font-size: 1.6rem;
           line-height: 2.6rem;
-          color: gray;
+          color: #323232;
         }
       }
       &_img {
@@ -169,7 +169,7 @@
         box-sizing: border-box;
       }
       &_tip {
-        color: #999;
+        color: #323232;
         font-size: 1.6rem;
         margin-bottom: 1rem;
       }
@@ -182,7 +182,7 @@
         color: #323232;
       }
       &_desc {
-        color: #999;
+        color: #323232;
         font-family: Roboto;
         font-weight: 400;
         font-size: 1.6rem;
@@ -209,7 +209,7 @@
             line-height: 2.4rem;
             letter-spacing: 0%;
             margin-bottom: 1.5rem;
-            color: #1F1F1F;
+            color: #323232;
             text-align: center;
           }
           &_tip {
@@ -219,7 +219,7 @@
             line-height: 1.8rem;
             padding: 0 1.6rem;
             margin-bottom: 1.5rem;
-            color: gray;
+            color: #323232;
           }
         }
         &_img {
@@ -246,7 +246,7 @@
             line-height: 2.4rem;
             letter-spacing: 0%;
             margin-bottom: 1.5rem;
-            color: #1F1F1F;
+            color: #323232;
             text-align: center;
           }
           &_tip {
@@ -256,7 +256,7 @@
             line-height: 1.8rem;
             padding: 0 1.6rem;
             margin-bottom: 1.5rem;
-            color: gray;
+            color: #323232;
           }
         }
         &_img {
@@ -274,7 +274,7 @@
         padding: 2rem 0;
         width: 100%;
         &_title {
-          color: #333;
+          color: #323232;
           font-size: 1.8rem;
           line-height: 4rem;
           text-align: center;

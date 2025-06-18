@@ -51,7 +51,7 @@
         class="home_view_banner"
       >
         <NuxtLink
-          to="/service"
+          to="/service/home"
           :external="true"
           class="home_view_banner"
         >
@@ -103,14 +103,14 @@
         <p class="home_view_forest_main_tip">{{t('home.tip4')}}</p>
         <NuxtLink 
           class="home_view_forest_main_btn"
-          to="/about"
+          to="/about/home"
         >
           {{t('home.btn')}}&nbsp;>
         </NuxtLink>
       </div>
     </div>
     <div class="home_view_product">
-      <NuxtLink class="home_view_product_item" to="product/oxygen">
+      <NuxtLink class="home_view_product_item" to="product/home">
         <div class="home_view_product_item_main">
           <h4 class="home_view_product_item_main_title">{{t('home.t1')}}</h4>
           <p class="home_view_product_item_main_desc">{{t('home.d1')}}</p>
@@ -169,7 +169,7 @@
         <p class="home_view_service_main_tip">{{t('home.dd3')}}</p>
         <NuxtLink 
           class="home_view_service_main_btn"
-          to="/service"
+          to="/service/home"
         >
           {{t('home.btn')}}&nbsp;>
         </NuxtLink>
@@ -378,13 +378,6 @@ const data = reactive({
 
 const { t } = useI18n();
 </script>
-<style>
-
-.swiper-button-next,
-.swiper-button-prev {
-  color: #0a6250 !important; /* ← 修改为你想要的颜色，比如 red, #fff, etc. */
-}
-</style>
 <style lang="scss" scoped>
 @use "./index.scss";
 swiper-slide {
