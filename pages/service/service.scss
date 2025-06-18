@@ -13,7 +13,7 @@
       top: 50%;
       transform: translate(-50%, -50%);
       color: #CDFEFF;
-      font-size: 2rem;
+      font-size: 4rem;
     }
   }
   &_position {
@@ -83,7 +83,7 @@
           padding: 0 2rem;
           color: #aaa;
           line-height: 2rem;
-          font-size: 1.2rem;
+          font-size: 1.6rem;
           text-align: center;
         }
       }
@@ -103,10 +103,19 @@
       height: 30rem;
       background-image: url('/product/bg.png');
       background-size: cover;
+      position: relative;
       &_img {
         width: 100%;
         height: auto;
         display: none;
+      }
+      &_desc {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        color: #CDFEFF;
+        font-size: 2rem;
       }
     }
     &_position {
