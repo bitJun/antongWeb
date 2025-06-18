@@ -280,7 +280,7 @@ img {
   margin: 0 auto;
   justify-content: space-between;
   &_main {
-    width: 84rem;
+    width: 114rem;
     &_nav {
       display: flex;
       &_item {
@@ -291,9 +291,11 @@ img {
           padding-bottom: 1rem;
           border-bottom: 1px solid #ffffff;
           margin-bottom: 1.5rem;
-          width: 7rem;
+          width: 75%;
         }
         &_link {
+          padding-right: 2%;
+          box-sizing: border-box;
           font-size: 1.6rem;
           color: #ffffff;
           margin-bottom: 1rem;
@@ -303,11 +305,13 @@ img {
     }
     &_tip {
       font-size: 1.2rem;
+      padding-right: 10%;
+      box-sizing: border-box;
       color: #fff;
     }
   }
   &_content {
-    width: 60rem;
+    width: 30rem;
     &_info {
       display: flex;
       align-items: center;
