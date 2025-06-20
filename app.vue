@@ -7,7 +7,8 @@ const isMobile = ref(false);
 const show = ref(false);
 const showMenu = ref(false);
 const showLang = ref(false);
-const bgColor = ref('transparent')
+const bgColor = ref('transparent');
+const type = ref('');
 const lang = ref({
   'en': 'EN',
   'zh-cn': '简体中文',
@@ -25,9 +26,9 @@ const lang = ref({
 
 useHead({
   script: [
-     {
-       src: 'https://cdn.bootcdn.net/ajax/libs/qrcodejs/1.0.0/qrcode.min.js'
-     }
+   {
+     src: 'https://cdn.bootcdn.net/ajax/libs/qrcodejs/1.0.0/qrcode.min.js'
+   }
   ]
 })
 
@@ -98,6 +99,9 @@ const scrollToTop = (smooth = true) => {
   }
 }
 
+const onChangeType = (key) => {
+  type.value = key;
+}
 
 </script>
 <template>
@@ -138,14 +142,14 @@ const scrollToTop = (smooth = true) => {
             </NuxtLink>
           </li>
           <li class="header_nav_item">
-            <!-- <NuxtLink
+            <NuxtLink
               class="header_nav_item_link"
               activeClass="active"
-              to="/about"
+              to="/about/home"
             >
               {{ t('nav.AboutUs') }}
-            </NuxtLink> -->
-            {{ t('nav.AboutUs') }}
+            </NuxtLink>
+            <!-- {{ t('nav.AboutUs') }}
             <div class="header_nav_item_box">
               <NuxtLink
                 class="header_nav_item_box_item"
@@ -175,17 +179,17 @@ const scrollToTop = (smooth = true) => {
               >
                 {{t('footer.honor')}}
               </NuxtLink>
-            </div>
+            </div> -->
           </li>
           <li class="header_nav_item">
-            <!-- <NuxtLink
+            <NuxtLink
               class="header_nav_item_link"
               activeClass="active"
               to="/product/home"
             >
               {{ t('nav.product') }}
-            </NuxtLink> -->
-            {{ t('nav.product') }}
+            </NuxtLink>
+            <!-- {{ t('nav.product') }} -->
             <div class="header_nav_item_box">
               <NuxtLink
                 class="header_nav_item_box_item"
@@ -239,14 +243,14 @@ const scrollToTop = (smooth = true) => {
             </div>
           </li>
           <li class="header_nav_item">
-            <!-- <NuxtLink
+            <NuxtLink
               class="header_nav_item_link"
               activeClass="active"
               to="/service"
             >
               {{ t('nav.service') }}
-            </NuxtLink> -->
-            {{ t('nav.service') }}
+            </NuxtLink>
+            <!-- {{ t('nav.service') }} -->
             <div class="header_nav_item_box">
               <NuxtLink
                 class="header_nav_item_box_item"
@@ -348,62 +352,89 @@ const scrollToTop = (smooth = true) => {
       <div class="footer_box_main">
         <div class="footer_box_main_nav">
           <div class="footer_box_main_nav_item">
-            <p class="footer_box_main_nav_item_title">{{t('footer.AboutUs')}}</p>
-            <NuxtLink
-              class="footer_box_main_nav_item_link"
-              to="/about/antong"
-            >
-              {{t('footer.shiming')}}
-            </NuxtLink>
-            <NuxtLink
-              class="footer_box_main_nav_item_link"
-              to="/about/antong"
-            >
-              {{t('footer.intro')}}
-            </NuxtLink>
-            <NuxtLink
-              class="footer_box_main_nav_item_link"
-              to="/about/advantages"
-            >
-              {{t('footer.advantages')}}
-            </NuxtLink>
-            <NuxtLink
-              class="footer_box_main_nav_item_link"
-              to="/about/honor"
-            >
-              {{t('footer.honor')}}
-            </NuxtLink>
+            <p class="footer_box_main_nav_item_title" @click="onChangeType('about')">
+              {{t('footer.AboutUs')}}
+              <img
+                v-if="isMobile"
+                :src="type == 'about' ? '/minus.png' : '/add.png'"
+                class="footer_box_main_nav_item_title_img"
+              />
+            </p>
+            <div class="footer_box_main_nav_item_box" :class="[type == 'about' ? 'block' : '']">
+              <NuxtLink
+                class="footer_box_main_nav_item_link"
+                to="/about/antong"
+              >
+                {{t('footer.shiming')}}
+              </NuxtLink>
+              <NuxtLink
+                class="footer_box_main_nav_item_link"
+                to="/about/antong"
+              >
+                {{t('footer.intro')}}
+              </NuxtLink>
+              <NuxtLink
+                class="footer_box_main_nav_item_link"
+                to="/about/advantages"
+              >
+                {{t('footer.advantages')}}
+              </NuxtLink>
+              <NuxtLink
+                class="footer_box_main_nav_item_link"
+                to="/about/honor"
+              >
+                {{t('footer.honor')}}
+              </NuxtLink>
+            </div>
             <!-- <a class="footer_box_main_nav_item_link">{{t('footer.concat')}}</a> -->
           </div>
           <div class="footer_box_main_nav_item">
-            <p class="footer_box_main_nav_item_title">{{t('footer.product')}}</p>
-            <NuxtLink 
-              class="footer_box_main_nav_item_link"
-              to="/product/oxygen"
-            >
-              {{t('footer.health')}}
-            </NuxtLink>
-            <NuxtLink 
-              class="footer_box_main_nav_item_link"
-              to="/product/master"
-            >
-              {{t('footer.creativity')}}
-            </NuxtLink>
+            <p class="footer_box_main_nav_item_title" @click="onChangeType('product')">
+              {{t('footer.product')}}
+              <img
+                v-if="isMobile"
+                :src="type == 'product' ? '/minus.png' : '/add.png'"
+                class="footer_box_main_nav_item_title_img"
+              />
+            </p>
+            <div class="footer_box_main_nav_item_box" :class="[type == 'product' ? 'block' : '']">
+              <NuxtLink 
+                class="footer_box_main_nav_item_link"
+                to="/product/oxygen"
+              >
+                {{t('footer.health')}}
+              </NuxtLink>
+              <NuxtLink 
+                class="footer_box_main_nav_item_link"
+                to="/product/master"
+              >
+                {{t('footer.creativity')}}
+              </NuxtLink>
+            </div>
           </div>
           <div class="footer_box_main_nav_item">
-            <p class="footer_box_main_nav_item_title">{{t('footer.service')}}</p>
-            <NuxtLink 
-              class="footer_box_main_nav_item_link"
-              to="/service/position"
-            >
-              {{t('footer.position')}}
-            </NuxtLink>
-            <NuxtLink 
-              class="footer_box_main_nav_item_link"
-              to="/service/process"
-            >
-              {{t('footer.process')}}
-            </NuxtLink>
+            <p class="footer_box_main_nav_item_title" @click="onChangeType('service')">
+              {{t('footer.service')}}
+              <img
+                v-if="isMobile"
+                :src="type == 'service' ? '/minus.png' : '/add.png'"
+                class="footer_box_main_nav_item_title_img"
+              />
+            </p>
+            <div class="footer_box_main_nav_item_box" :class="[type == 'service' ? 'block' : '']">
+              <NuxtLink 
+                class="footer_box_main_nav_item_link"
+                to="/service/position"
+              >
+                {{t('footer.position')}}
+              </NuxtLink>
+              <NuxtLink 
+                class="footer_box_main_nav_item_link"
+                to="/service/process"
+              >
+                {{t('footer.process')}}
+              </NuxtLink>
+            </div>
           </div>
           <div class="footer_box_main_nav_item">
             <p class="footer_box_main_nav_item_title">{{t('footer.news')}}</p>

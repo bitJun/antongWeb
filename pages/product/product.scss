@@ -136,7 +136,7 @@
   .product_view {
     &_box1,
     &_box2 {
-      padding: 2rem 1.6rem;
+      padding: 2rem 3rem;
       box-sizing: border-box;
       &_main {
         width: 100%;
@@ -165,7 +165,7 @@
       }
       &_box {
         width: 100%;
-        padding: 1.6rem;
+        padding: 2rem 3rem;
         box-sizing: border-box;
         &_title {
           font-size: 1.8rem;
@@ -234,5 +234,8 @@
   .box {
     width: 100%;
     flex-direction: column;
+  }
+  .reverse {
+    flex-direction: column-reverse;
   }
 }

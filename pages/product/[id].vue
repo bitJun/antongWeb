@@ -24,7 +24,7 @@
       </div>
     </NuxtLink>
     <NuxtLink id="massage" to="/massage" class="product_view_section" style="background: #ffffff;padding: 2rem 0;">
-      <div class="box">
+      <div class="box reverse">
         <div class="product_view_section_box">
           <h4 class="product_view_section_box_title">{{t('product.p2_title')}}</h4>
           <p class="product_view_section_box_desc">{{t('product.p2_desc')}}</p>

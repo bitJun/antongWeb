@@ -6,27 +6,8 @@
         '--swiper-navigation-color': '#0a6250',
         '--swiper-pagination-color': '#0a6250'
       }"
+      :autoplay="true"
     >
-      <swiper-slide
-        class="home_view_banner"
-      >
-        <NuxtLink
-          to="/product/oxygen"
-          :external="true"
-          class="home_view_banner"
-        >
-          <img
-            :src="isMobile ? '/home/banner_mb1.png' : '/home/banner1.png'"
-            class="home_view_banner_img"
-          />
-          <div class="home_view_banner_box">
-            <h4 class="home_view_banner_box_title">{{t('home.banner1_title')}}</h4>
-            <p class="home_view_banner_box_desc">{{t('home.banner1_desc1')}}</p>
-            <p class="home_view_banner_box_desc">{{t('home.banner1_desc2')}}</p>
-            <div class="home_view_banner_box_btn">{{t('home.btn')}}&nbsp;></div>
-          </div>
-        </NuxtLink>
-      </swiper-slide>
       <swiper-slide
         class="home_view_banner"
       >
@@ -44,6 +25,26 @@
             <p class="home_view_banner_box1_desc">{{t('home.banner2_desc1')}}</p>
             <p class="home_view_banner_box1_desc">{{t('home.banner2_desc2')}}</p>
             <div class="home_view_banner_box1_btn">{{t('home.btn')}}&nbsp;></div>
+          </div>
+        </NuxtLink>
+      </swiper-slide>
+      <swiper-slide
+        class="home_view_banner"
+      >
+        <NuxtLink
+          to="/product/oxygen"
+          :external="true"
+          class="home_view_banner"
+        >
+          <img
+            :src="isMobile ? '/home/banner_mb1.png' : '/home/banner1.png'"
+            class="home_view_banner_img"
+          />
+          <div class="home_view_banner_box">
+            <h4 class="home_view_banner_box_title">{{t('home.banner1_title')}}</h4>
+            <p class="home_view_banner_box_desc">{{t('home.banner1_desc1')}}</p>
+            <p class="home_view_banner_box_desc">{{t('home.banner1_desc2')}}</p>
+            <div class="home_view_banner_box_btn">{{t('home.btn')}}&nbsp;></div>
           </div>
         </NuxtLink>
       </swiper-slide>
@@ -87,6 +88,26 @@
           </div>
         </NuxtLink>
       </swiper-slide>
+      <swiper-slide
+        class="home_view_banner"
+      >
+        <NuxtLink
+          to="/product/master"
+          :external="true"
+          class="home_view_banner"
+        >
+          <img
+            :src="isMobile ? '/home/banner_mb4.png' : '/home/banner5.png'"
+            class="home_view_banner_img"
+          />
+          <div class="home_view_banner_box4">
+            <h4 class="home_view_banner_box4_title">{{t('home.banner5_title')}}</h4>
+            <p class="home_view_banner_box4_desc">{{t('home.banner5_desc1')}}</p>
+            <p class="home_view_banner_box4_desc">{{t('home.banner5_desc2')}}</p>
+            <div class="home_view_banner_box4_btn">{{t('home.btn')}}&nbsp;></div>
+          </div>
+        </NuxtLink>
+      </swiper-slide>
     </swiper-container>
     <div class="line"></div>
     <div class="home_view_forest">
@@ -117,7 +138,7 @@
           <div class="home_view_product_item_main_more">{{t('home.btn')}}&nbsp;></div>
         </div>
         <img
-          src="/home/pic1.png"
+          :src="isMobile ? '/home/pic_mb1.png' : '/home/pic1.png'"
           class="home_view_product_item_img"
         />
       </NuxtLink>
@@ -128,7 +149,7 @@
           <div class="home_view_product_item_main_more">{{t('home.btn')}}&nbsp;></div>
         </div>
         <img
-          src="/home/pic2.png"
+          :src="isMobile ? '/home/pic_mb2.png' : '/home/pic2.png'"
           class="home_view_product_item_img"
         />
       </NuxtLink>
@@ -139,7 +160,7 @@
           <div class="home_view_product_item_main_more">{{t('home.btn')}}&nbsp;></div>
         </div>
         <img
-          src="/home/pic3.png"
+          :src="isMobile ? '/home/pic_mb3.png' : '/home/pic3.png'"
           class="home_view_product_item_img"
         />
       </NuxtLink>
@@ -151,7 +172,7 @@
           <div class="home_view_product_item_main_more">{{t('home.btn')}}&nbsp;></div>
         </div>
         <img
-          src="/home/pic4.png"
+          :src="isMobile ? '/home/pic_mb4.png' : '/home/pic4.png'"
           class="home_view_product_item_img"
         />
       </NuxtLink>
@@ -181,6 +202,7 @@
       <div class="home_view_news_list">
         <swiper-container
           ref="containerRef"
+          :slides-per-view="isMobile ? 2 : 4"
           :style="{
             '--swiper-navigation-color': '#0a6250',
             '--swiper-pagination-color': '#0a6250'
@@ -298,33 +320,67 @@ const isMobile = ref(true);
 const windowsUrl = ref('');
 const macUrl = ref('');
 const containerRef = ref(null);
+let num = ref(4);
 const bannerRef = ref(null);
+let number = 0;
+
+
+onMounted(()=>{
+  nextTick(()=>{
+    isMobile.value = isMobileDevice();
+    if (isMobileDevice()) {
+      console.log(123)
+      num.value = 2;
+      number = 2;
+    } else {
+      console.log(123423)
+      num.value = 4;
+      number = 4;
+    }
+    window.addEventListener("resize", function () {
+      isMobile.value = isMobileDevice();
+      if (isMobileDevice()) {
+        num.value = 2;
+      number = 2;
+      } else {
+        num.value = 4;
+      number = 4;
+      }
+    });
+  console.log('num.value', num.value) 
+  console.log('number', number) 
+  console.log('isMobileDevice', isMobileDevice()) 
+  })
+
+  onLoadData();
+});
+
 const swipers = useSwiper(bannerRef, {
   effect: 'creative',
   loop: true,
   autoplay: {
-    delay: 1000,
+    delay: 3000,
   },
   slidesPerView: 1,
   navigation: true,
   creativeEffect: {
     prev: {
       shadow: true,
-      translate: [0, 0, -400],
+      translate: [0, 0, -200],
     },
     next: {
       shadow: true,
       translate: [0, 0, -400],
     },
   },
-})
+});
+
 const swiper = useSwiper(containerRef, {
   effect: 'creative',
   loop: true,
   autoplay: {
     delay: 1000,
   },
-  slidesPerView: 4,
   navigation: true,
   spaceBetween: 20,
   creativeEffect: {
@@ -338,18 +394,6 @@ const swiper = useSwiper(containerRef, {
     },
   },
 })
-
-onMounted(()=>{
-  nextTick(()=>{
-    isMobile.value = isMobileDevice();
-    window.addEventListener("resize", function () {
-      isMobile.value = isMobileDevice();
-    });
-    console.log('isMobile.value', isMobile.value)
-  })
-  onLoadData();
-});
-
 // if (process.client) {
 //   const isMobileDevice = () => {
 //     return /Mobi|Android|iPhone|iPad|iPod|Windows Phone/i.test(navigator.userAgent);

@@ -164,6 +164,8 @@
     &_subtitle {
       padding: 2rem 0;
       display: flex;
+      width: 90%;
+      margin: 0 auto;
       align-items: center;
       justify-content: center;
       font-size: 2rem;
@@ -211,7 +213,7 @@
         &_desc {
           font-size: 1.2rem;
           color: #333333;
-          margin-bottom: 1.5rem;
+          margin-bottom: 0;
         }
         &_btn {
           display: flex;
@@ -267,8 +269,14 @@
       }
     }
   } 
+  .flex {
+    margin-top: 1rem;
+  }
   .box {
     width: 100%;
     flex-direction: column;
+  }
+  .reverse {
+    flex-direction: column-reverse;
   }
 }

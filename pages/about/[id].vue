@@ -44,7 +44,8 @@
         <h4 class="about_view_box_container_title">{{t('about.honor')}}</h4>
         <div class="about_view_box_container_swiper">
           <swiper-container
-            ref="containerRef"
+            ref="containerRefs"
+            :slides-per-view="isMobile ? 2 : 4"
             :style="{
               '--swiper-navigation-color': '#0a6250',
               '--swiper-pagination-color': '#0a6250'
@@ -118,12 +119,24 @@ import { useI18n } from '#imports';
 const { t } = useI18n();
 import { reactive, ref, onMounted, watch } from 'vue';
 import { useRoute } from 'vue-router';
+const isMobile = ref(true);
 
 const route = useRoute();
 
 onMounted(() => {
   scrollToHash()
+  nextTick(()=>{
+    isMobile.value = isMobileDevice();
+    window.addEventListener("resize", function () {
+      isMobile.value = isMobileDevice();
+    });
+    console.log('isMobile.value', isMobile.value)
+  })
 });
+
+const isMobileDevice = () => {
+  return /Mobi|Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
+}
 
 const scrollToHash = () => {
   if (route.params.id && route.params.id != 'home') {
@@ -149,12 +162,33 @@ watch(route, (to, from) => {
 //   scrollToHash()
 // },{ deep: true })
 
-const containerRef = ref(null);
-const swiper = useSwiper(containerRef, {
+const pcRef = ref(null);
+const containerRefs = ref(null);
+
+const swiper = useSwiper(pcRef, {
   effect: 'creative',
   loop: true,
   autoplay: true,
-  slidesPerView: 4,
+  spaceBetween: 20,
+  navigation: true,
+  creativeEffect: {
+    prev: {
+      shadow: true,
+      translate: [0, 0, -400],
+    },
+    next: {
+      shadow: true,
+      translate: [0, 0, -400],
+    },
+  },
+});
+
+
+const swipers = useSwiper(containerRefs, {
+  effect: 'creative',
+  loop: true,
+  autoplay: true,
+  slidesPerView: isMobile.value ? 2 : 4,
   spaceBetween: 20,
   navigation: true,
   creativeEffect: {

@@ -40,7 +40,10 @@
     "banner3_desc2": "for exclusive enjoyment.",
     "banner4_title": "Furniture Products",
     "banner4_desc1": "Enjoy a cozy and",
-    "banner4_desc2": "comfortable space."
+    "banner4_desc2": "comfortable space.",
+    "banner5_title": "Headroom products",
+    "banner5_desc1": "every breath",
+    "banner5_desc2": "They are all intimate dialogues with nature"
   },
   "about": {
     "tip": "Our Mission",
@@ -115,7 +118,7 @@
     "p7_title": "Antora New Style Tea Space",
     "p8_title": "High-end Luxury Massage Chair",
     "p9_title": "Smart Massage Chair",
-    "more": "更多产品"
+    "more": "More products"
   },
   "footer": {
     "AboutUs": "About Us",
@@ -166,6 +169,13 @@
     "p3_desc4": "◎7-inch LED touch screen control, equipped with OGAWA operating system interface",
     "p3_desc5": "◎42 3D wrap-around airbags focus on leg massage",
     "p3_desc6": "◎High-quality music amplifier + LED soothing lights activate body and mind",
+    "p4_title": "OGAWA Smart Eye Massager Pro",
+    "p4_desc1": "◎ 3D Precision Massage Heads - Deliver targeted kneading for enhanced effectiveness",
+    "p4_desc2": "◎ 3D Vibration Massage - Stimulates acupoints across the entire eye contour",
+    "p4_desc3": "◎ 5-Second Rapid Heating - Alleviates dark circles with swift thermal therapy",
+    "p4_desc4": "◎ Bluetooth Music Integration - Enables immersive relaxation experiences",
+    "p4_desc5": "◎ See-Through Design - Accommodates screen viewing and eye protection simultaneously",
+    "p4_desc6": "◎ Four Specialized Eye Care Modes - Intelligently tailored to individual needs",
     "more": "Learn More"
   },
   "purifier": {
