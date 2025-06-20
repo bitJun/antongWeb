@@ -52,7 +52,6 @@ const onShowMenu = () => {
 const onChangeLocal = (key) => {
   setLocale(key);
   show.value = false;
-  console.log('show.value', show.value)
 }
 
 

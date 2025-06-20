@@ -12,8 +12,7 @@
         class="home_view_banner"
       >
         <NuxtLink
-          to="/product/massage"
-          :external="true"
+          to="product/massage"
           class="home_view_banner"
         >
           <img
@@ -32,8 +31,7 @@
         class="home_view_banner"
       >
         <NuxtLink
-          to="/product/oxygen"
-          :external="true"
+          to="product/oxygen"
           class="home_view_banner"
         >
           <img
@@ -52,8 +50,7 @@
         class="home_view_banner"
       >
         <NuxtLink
-          to="/service/home"
-          :external="true"
+          to="service/home"
           class="home_view_banner"
         >
           <img
@@ -72,8 +69,7 @@
         class="home_view_banner"
       >
         <NuxtLink
-          to="/product/master"
-          :external="true"
+          to="product/master"
           class="home_view_banner"
         >
           <img
@@ -92,8 +88,7 @@
         class="home_view_banner"
       >
         <NuxtLink
-          to="/product/master"
-          :external="true"
+          to="product/master"
           class="home_view_banner"
         >
           <img
