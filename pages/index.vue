@@ -324,11 +324,9 @@ onMounted(()=>{
   nextTick(()=>{
     isMobile.value = isMobileDevice();
     if (isMobileDevice()) {
-      console.log(123)
       num.value = 2;
       number = 2;
     } else {
-      console.log(123423)
       num.value = 4;
       number = 4;
     }
@@ -336,15 +334,12 @@ onMounted(()=>{
       isMobile.value = isMobileDevice();
       if (isMobileDevice()) {
         num.value = 2;
-      number = 2;
+        number = 2;
       } else {
         num.value = 4;
-      number = 4;
+        number = 4;
       }
     });
-  console.log('num.value', num.value) 
-  console.log('number', number) 
-  console.log('isMobileDevice', isMobileDevice()) 
   })
 
   onLoadData();

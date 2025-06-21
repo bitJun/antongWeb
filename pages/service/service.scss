@@ -94,20 +94,154 @@
     background: #ffffff;
   }
 }
+.massage {
+  width: 120rem;
+  margin: 2rem auto 0 auto;
+  &_banner {
+    width: 100%;
+    height: auto;
+    margin-bottom: 2rem;
+  }
+  &_title {
+    text-align: center;
+    height: 4rem;
+    font-size: 2.8rem;
+    line-height: 2.8rem;
+    font-weight: bold;
+    margin-bottom: 1rem
+  }
+  &_box {
+    background: #A7C3D2;
+    padding: 4rem 0;
+    &_main {
+      width: 50%;
+      padding-left: 3rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      h4 {
+        font-size: 3.8rem;
+        background-image: url('/service/mask.png');
+        background-size: cover;
+        margin-bottom: 2rem;
+      }
+      p {
+        font-size: 2.6rem;
+      }
+      &_icon {
+        width: 8rem;
+        margin-bottom: 1rem;
+      }
+    }
+    &_img {
+      width: 50%;
+    }
+    &_big {
+      width: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &_img {
+        width: 60%;
+      }
+    }
+    &_small {
+      width: 50%;
+      display: flex;
+      align-items: center;
+      &_img {
+        width: 85%;
+      }
+    }
+    &_flex {
+      display: flex;
+      .massage_box_main {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+    }
+    &_tips {
+      margin-top: 2rem;
+      text-align: center;
+      font-size: 3rem;
+      color: #323232;
+      font-weight: 700;
+      // margin-bottom: 1rem;
+    }
+    &_tip {
+      margin-top: 1rem;
+      text-align: center;
+      font-size: 2rem;
+      color: #323232;
+      margin-bottom: 1rem;
+    }
+    &_single {
+      padding: 0 8rem;
+      &_img {
+        width: 100%;
+        height: auto;
+      }
+    }
+    &_imgs {
+      padding: 0 8rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      &_item {
+        width: 100%;
+        height: auto;
+      }
+    }
+    &_three {
+      padding: 0 8rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 2rem;
+      &_item {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+  &_box:last-child {
+    margin-bottom: 0.5rem;
+  }
+  &_box.flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0;
+    &_img {
+      width: 3rem;
+    }
+  }
+  &_tip {
+    text-align: right;
+    font-size: 1.8rem;
+    color: #323232;
+    margin: 1rem 0 2rem 0;
+  }
+}
 
 @media screen and (max-width: 768px) {
   .product_view {
     margin-top: 0;
     &_bg {
       width: 100%;
-      height: 30rem;
-      background-image: url('/product/bg.png');
+      height: auto;
       background-size: cover;
       position: relative;
       &_img {
         width: 100%;
         height: auto;
-        display: none;
       }
       &_desc {
         position: absolute;
@@ -146,6 +280,7 @@
           line-height: 2.4rem;
           font-weight: 500;
           margin-bottom: 2rem;
+          text-align: center;
         }
         &_desc {
           line-height: 1.8rem;
@@ -203,6 +338,144 @@
     &_line {
       height: 1rem;
       background: #ffffff;
+    }
+  }
+  .massage {
+    width: 100%;
+    margin: 2rem auto 0 auto;
+    &_banner {
+      width: 100%;
+      height: auto;
+      margin-bottom: 2rem;
+    }
+    &_title {
+      text-align: center;
+      font-size: 1.5rem;
+      line-height: 2.8rem;
+      font-weight: bold;
+      margin-bottom: 1rem
+    }
+    &_box {
+      background: #A7C3D2;
+      padding: 4rem 3rem;
+      &_main {
+        width: 100%;
+        padding-left: 0rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        h4 {
+          font-size: 2rem;
+          background-image: url('/service/mask.png');
+          background-size: cover;
+          margin-bottom: 2rem;
+        }
+        p {
+          font-size: 1.6rem;
+        }
+        &_icon {
+          width: 6rem;
+          margin-bottom: 1rem;
+        }
+      }
+      &_img {
+        width: 50%;
+      }
+      &_big {
+        width: 80%;
+        margin: 2rem auto 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &_img {
+          width: 100%;
+        }
+      }
+      &_small {
+        margin-top: 3rem;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        &_img {
+          width: 100%;
+        }
+      }
+      &_flex {
+        display: flex;
+        flex-direction: column;
+        .massage_box_main {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+        }
+      }
+      &_tips {
+        margin-top: 2rem;
+        text-align: center;
+        font-size: 1.8em;
+        color: #323232;
+        font-weight: 700;
+        // margin-bottom: 1rem;
+      }
+      &_tip {
+        margin-top: 1rem;
+        text-align: center;
+        font-size: 1.2rem;
+        color: #323232;
+        margin-bottom: 1rem;
+      }
+      &_single {
+        padding: 0;
+        &_img {
+          width: 100%;
+          height: auto;
+        }
+      }
+      &_imgs {
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        &_item {
+          width: 100%;
+          height: auto;
+        }
+      }
+      &_three {
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        &_item {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+    &_box:last-child {
+      margin-bottom: 0.5rem;
+    }
+    &_box.flex {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
+    .arrow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 1rem 0;
+      &_img {
+        width: 3rem;
+      }
+    }
+    &_tip {
+      text-align: center;
+      font-size: 1.2rem;
+      color: #323232;
+      margin: 1rem 0 2rem 0;
     }
   }
 }

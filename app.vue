@@ -1,4 +1,5 @@
 <script setup>
+import { NuxtLink } from '#components';
 import { useI18n } from '#imports';
 const { t } = useI18n();
 const { locale, setLocale } = useI18n();
@@ -105,12 +106,12 @@ const onChangeType = (key) => {
 </script>
 <template>
   <div class="top_nav" v-if="isMobile">
-    <div class="top_nav_logo">
+    <NuxtLink to="/" class="top_nav_logo">
       <img
         src="/logo.jpg"
         class="top_nav_logo_img"
       />
-    </div>
+    </NuxtLink>
     <img
       src="/menu.png"
       class="top_nav_icon"
@@ -123,12 +124,12 @@ const onChangeType = (key) => {
     v-else
   >
     <div class="header_container">
-      <div class="header_logo">
+      <NuxtLink to="/" class="header_logo">
         <img
           src="/logo.jpg"
           class="header_logo_img"
         />
-      </div>
+      </NuxtLink>
       <div class="header_box">
         <ul class="header_nav">
           <li class="header_nav_item">
