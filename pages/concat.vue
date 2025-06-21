@@ -12,11 +12,11 @@
             <img
               src="/contact/email.png"
               class="about_view_main_vip_img"
-            />&nbsp;
+            />&nbsp;public@antoralife.com
             <!-- {{t('contact.VIP')}} -->
             <!-- 邮箱 -->
           </p>
-          <p class="about_view_main_vip">public@antoralife.com</p>
+          <!-- <p class="about_view_main_vip">public@antoralife.com</p> -->
         </div>
         <p class="about_view_main_vip" v-else>
           <!-- {{t('contact.VIP')}}&nbsp; -->

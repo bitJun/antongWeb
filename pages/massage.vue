@@ -32,7 +32,7 @@
       </div>
     </NuxtLink>
     <NuxtLink to="/massagedetail/880" class="product_view_section" style="background: #ffffff;padding: 2rem 0;">
-      <div class="box">
+      <div class="box reverse">
         <div class="product_view_section_box">
           <h4 class="product_view_section_box_title" style="margin-bottom: 0;">M-880</h4>
           <h4 class="product_view_section_box_title">{{t('massage.p2_title')}}</h4>
@@ -78,7 +78,7 @@
       </div>
     </NuxtLink>
     <NuxtLink to="/massagedetail/2528" class="product_view_section" style="background: #ffffff;padding: 2rem 0;">
-      <div class="box">
+      <div class="box reverse">
         <div class="product_view_section_box">
           <h4 class="product_view_section_box_title" style="margin-bottom: 0;">OG-2528</h4>
           <h4 class="product_view_section_box_title">{{t('massage.p4_title')}}</h4>

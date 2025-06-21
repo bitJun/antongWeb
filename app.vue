@@ -245,7 +245,7 @@ const onChangeType = (key) => {
             <NuxtLink
               class="header_nav_item_link"
               activeClass="active"
-              to="/service"
+              to="/service/home"
             >
               {{ t('nav.service') }}
             </NuxtLink>
@@ -360,19 +360,19 @@ const onChangeType = (key) => {
               />
             </p>
             <div class="footer_box_main_nav_item_box" :class="[type == 'about' ? 'block' : '']">
-              <NuxtLink
+              <!-- <NuxtLink
                 class="footer_box_main_nav_item_link"
                 to="/about/antong"
               >
                 {{t('footer.shiming')}}
-              </NuxtLink>
+              </NuxtLink> -->
               <NuxtLink
                 class="footer_box_main_nav_item_link"
                 to="/about/antong"
               >
                 {{t('footer.intro')}}
               </NuxtLink>
-              <NuxtLink
+              <!-- <NuxtLink
                 class="footer_box_main_nav_item_link"
                 to="/about/advantages"
               >
@@ -383,7 +383,7 @@ const onChangeType = (key) => {
                 to="/about/honor"
               >
                 {{t('footer.honor')}}
-              </NuxtLink>
+              </NuxtLink> -->
             </div>
             <!-- <a class="footer_box_main_nav_item_link">{{t('footer.concat')}}</a> -->
           </div>

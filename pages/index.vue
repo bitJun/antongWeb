@@ -174,7 +174,7 @@
     </div>
     <div class="home_view_service">
       <img
-        src="/home/serviceBg.png"
+        :src="isMobile ? '/home/serviceBg_mb.png' : '/home/serviceBg.png'"
         class="home_view_service_img"
       />
       <div class="home_view_service_main">

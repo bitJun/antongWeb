@@ -5,7 +5,11 @@
         src="/about/bg.png"
         class="about_view_section_img"
       />
-      <div class="about_view_section_main">
+      <div class="about_view_section_main" v-if="isMobile">
+        <h4 class="about_view_section_tip">{{t('about.tip')}}</h4>
+        <p class="about_view_section_title">{{t('about.title')}}{{t('about.desc')}}</p>
+      </div>
+      <div class="about_view_section_main" :class="[lang == 'zh-cn' ? 'w36' : '']" v-else>
         <h4 class="about_view_section_tip">{{t('about.tip')}}</h4>
         <p class="about_view_section_title">{{t('about.title')}}</p>
         <p class="about_view_section_desc">{{t('about.desc')}}</p>
@@ -116,14 +120,17 @@
 </template>
 <script setup>
 import { useI18n } from '#imports';
-const { t } = useI18n();
+const { t, locale, setLocale } = useI18n();
 import { reactive, ref, onMounted, watch } from 'vue';
 import { useRoute } from 'vue-router';
 const isMobile = ref(true);
 
 const route = useRoute();
 
+const lang = ref('');
+
 onMounted(() => {
+  console.log('locale', locale)
   scrollToHash()
   nextTick(()=>{
     isMobile.value = isMobileDevice();
@@ -150,6 +157,10 @@ const scrollToHash = () => {
     }, 100);
   }
 }
+watch(locale, (val, oldVal) => {
+  console.log('val', val);
+  lang.value = val;
+})
 
 watch(route, (to, from) => {
   

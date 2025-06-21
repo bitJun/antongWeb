@@ -29,7 +29,7 @@
       </NuxtLink>
       <NuxtLink to="https://www.ogawa.com.cn/news_181.html" target="_blank" class="full bg2">
         <div class="new_view_box_main reverse">
-          <div>
+          <div class="w40">
             <div class="new_view_box_main_desc">
               <h4 class="new_view_box_main_desc_title">{{t('news.t2')}}</h4>
               <p class="new_view_box_main_desc_tip">{{t('news.d2')}}</p>
@@ -59,7 +59,7 @@
       </NuxtLink>
       <NuxtLink to="https://mp.weixin.qq.com/s/Aj_TfSwMkJvL1G5SrqWiVA" target="_blank" class="full bg1">
         <div class="new_view_box_main reverse">
-          <div>
+          <div class="w40">
             <div class="new_view_box_main_desc">
               <h4 class="new_view_box_main_desc_title">{{t('news.t4')}}</h4>
               <p class="new_view_box_main_desc_tip">{{t('news.d4')}}</p>
@@ -88,7 +88,7 @@
       </NuxtLink>
       <NuxtLink to="http://www.ogawaworld.net.cn/brand/news/119" target="_blank" class="full bg3">
         <div class="new_view_box_main reverse">
-          <div>
+          <div class="w40">
             <div class="new_view_box_main_desc">
               <h4 class="new_view_box_main_desc_title">{{t('news.t6')}}</h4>
               <p class="new_view_box_main_desc_tip">{{t('news.d6')}}</p>
@@ -117,7 +117,7 @@
       </NuxtLink>
       <NuxtLink to="https://www.ogawa.com.cn/news_180.html" target="_blank" class="full bg2">
         <div class="new_view_box_main reverse">
-          <div>
+          <div class="w40">
             <div class="new_view_box_main_desc">
               <h4 class="new_view_box_main_desc_title">{{t('news.t8')}}</h4>
               <p class="new_view_box_main_desc_tip">{{t('news.d8')}}</p>

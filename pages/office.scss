@@ -179,7 +179,7 @@
       color: #206857;
     }
     &_box1 {
-      padding: 2rem 1.6rem;
+      padding: 2rem 3rem;
       box-sizing: border-box;
       &_main {
         width: 100%;
@@ -196,12 +196,12 @@
       }
     }
     &_main {
-      background: #E6D8C6;
       padding-bottom: 3rem;
       width: 100%;
       &_title {
         color: #206857;
-        padding: 2rem 0;
+        padding: 2rem 3rem;
+        text-align: center;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -239,12 +239,15 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 1rem;
+        box-sizing: border-box;
+        width: 100%;
         &_item {
           padding: 1rem 0;
           background: #ffffff;
+          box-sizing: border-box;
           &_img {
             width: 100%;
-            margin-bottom: 1rem;
+            margin-bottom: 0rem;
           }
           &_desc {
             display: flex;
@@ -252,6 +255,8 @@
             justify-content: center;
             color: #323232;
             font-size: 1.2rem;
+            height: 4rem;
+            text-align: center;
           }
         }
       }
@@ -259,21 +264,29 @@
         box-sizing: border-box;
         padding: 0 5%;
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
         gap: 1rem;
+        box-sizing: border-box;
+        width: 100%;
         &_item {
           padding: 1rem 0;
           background: #ffffff;
           &_img {
             width: 100%;
-            margin-bottom: 1rem;
+            margin-bottom: 0rem;
           }
           &_desc {
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             justify-content: center;
             color: #323232;
             font-size: 1.2rem;
+            text-align: center;
+            height: 4rem;
+            line-height: 1.3rem;
+            bottom: -0.5rem;
+            padding: 0 1rem;
+            box-sizing: border-box;
           }
         }
       }
@@ -286,6 +299,9 @@
   .tip {
     width: 100%;
     font-size: 1.4rem;
+    padding: 0 3rem;
+    text-align: center;
+    box-sizing: border-box;
     margin: 1rem 0;
     justify-content: center;
   }

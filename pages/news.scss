@@ -153,6 +153,12 @@
 .bg3 {
   background: #E0ECF8;
 }
+.w40 {
+  width: 40%;
+  .new_view_box_main_desc  {
+    width: 100%;
+  }
+}
 @media screen and (max-width: 768px) {
   .new_view {
     &_section {
@@ -253,5 +259,8 @@
   }
   .reverse {
     flex-direction: column-reverse;
+  }
+  .w40 {
+    width: 100%;
   }
 }
