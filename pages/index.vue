@@ -92,7 +92,7 @@
           class="home_view_banner"
         >
           <img
-            :src="isMobile ? '/home/banner_mb4.png' : '/home/banner5.png'"
+            :src="isMobile ? '/home/banner_mb5.png' : '/home/banner5.png'"
             class="home_view_banner_img"
           />
           <div class="home_view_banner_box4">

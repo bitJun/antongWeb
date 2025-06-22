@@ -257,14 +257,14 @@ const onChangeType = (key) => {
                 activeClass="active"
                 to="/service/position"
               >
-                {{t('footer.position')}}
+                {{t('service.subTitles')}}
               </NuxtLink>
               <NuxtLink
                 class="header_nav_item_box_item"
                 activeClass="active"
-                to="/service/process"
+                to="/service/massage"
               >
-                {{t('footer.process')}}
+                {{t('service.massage')}}
               </NuxtLink>
             </div>
           </li>
@@ -426,13 +426,13 @@ const onChangeType = (key) => {
                 class="footer_box_main_nav_item_link"
                 to="/service/position"
               >
-                {{t('footer.position')}}
+                {{t('service.subTitles')}}
               </NuxtLink>
               <NuxtLink 
                 class="footer_box_main_nav_item_link"
-                to="/service/process"
+                to="/service/massage"
               >
-                {{t('footer.process')}}
+                {{t('service.massage')}}
               </NuxtLink>
             </div>
           </div>

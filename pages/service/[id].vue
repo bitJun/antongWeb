@@ -74,7 +74,7 @@
       </div>
     </div>
     <div class="product_view_line"></div>
-    <div class="massage">
+    <div class="massage" id="massage">
       <h3 class="product_view_box_title">{{t('service.massage')}}</h3>
       <img
         src="/service/massage_banner.png"
