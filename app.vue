@@ -496,7 +496,7 @@ const onChangeType = (key) => {
         </div>
       </div>
     </div>
-    <div class="footer_box">
+    <div class="footer_box reverse">
       <div class="footer_box_main">
         <p class="footer_box_main_tip">
           {{t('footer.tip')}}

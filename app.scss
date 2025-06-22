@@ -552,7 +552,7 @@ img {
       &_nav {
         flex-direction: column;
         display: flex;
-        padding: 0 1.6rem;
+        padding: 0 3rem;
         &_item {
           &_title {
             width: 100% !important;
@@ -570,16 +570,28 @@ img {
         }
       }
       &_tip {
-        padding: 0 1.6rem;
+        padding: 0 3rem;
         box-sizing: border-box;
       }
     }
     &_content {
       flex-direction: column;
       width: 100%;
-      padding: 0 1.6rem;
+      padding: 0 3rem;
       box-sizing: border-box;
+      &_list {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        &_img {
+          width: 100%;
+        }
+      }
     }
+  }
+  .reverse {
+    margin-top: 1rem;
+    gap: 1.5rem;
+    flex-direction: column-reverse;
   }
 }
 .block {
