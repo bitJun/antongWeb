@@ -352,14 +352,20 @@ const onChangeType = (key) => {
       <div class="footer_box_main">
         <div class="footer_box_main_nav">
           <div class="footer_box_main_nav_item">
-            <p class="footer_box_main_nav_item_title" @click="onChangeType('about')">
+            <NuxtLink
+              class="footer_box_main_nav_item_title"
+              to="/about/antong"
+            >
+              {{t('footer.intro')}}
+            </NuxtLink>
+            <!-- <p class="footer_box_main_nav_item_title" @click="onChangeType('about')">
               {{t('footer.AboutUs')}}
               <img
                 v-if="isMobile"
                 :src="type == 'about' ? '/minus.png' : '/add.png'"
                 class="footer_box_main_nav_item_title_img"
               />
-            </p>
+            </p> -->
             <div class="footer_box_main_nav_item_box" :class="[type == 'about' ? 'block' : '']">
               <!-- <NuxtLink
                 class="footer_box_main_nav_item_link"
@@ -367,12 +373,12 @@ const onChangeType = (key) => {
               >
                 {{t('footer.shiming')}}
               </NuxtLink> -->
-              <NuxtLink
+              <!-- <NuxtLink
                 class="footer_box_main_nav_item_link"
                 to="/about/antong"
               >
                 {{t('footer.intro')}}
-              </NuxtLink>
+              </NuxtLink> -->
               <!-- <NuxtLink
                 class="footer_box_main_nav_item_link"
                 to="/about/advantages"
@@ -389,10 +395,16 @@ const onChangeType = (key) => {
             <!-- <a class="footer_box_main_nav_item_link">{{t('footer.concat')}}</a> -->
           </div>
           <div class="footer_box_main_nav_item">
-            <p class="footer_box_main_nav_item_title" @click="onChangeType('product')">
-              {{t('footer.product')}}
+            <p class="footer_box_main_nav_item_title">
+              <NuxtLink
+                to="/product/home"
+                style="color: #ffffff;"
+              >
+                {{t('footer.product')}}
+              </NuxtLink>
               <img
                 v-if="isMobile"
+                @click="onChangeType('product')"
                 :src="type == 'product' ? '/minus.png' : '/add.png'"
                 class="footer_box_main_nav_item_title_img"
               />
@@ -413,11 +425,17 @@ const onChangeType = (key) => {
             </div>
           </div>
           <div class="footer_box_main_nav_item">
-            <p class="footer_box_main_nav_item_title" @click="onChangeType('service')">
-              {{t('footer.service')}}
+            <p class="footer_box_main_nav_item_title">
+              <NuxtLink
+                to="/service/home"
+                style="color: #ffffff;"
+              >
+                {{t('footer.service')}}
+              </NuxtLink>
               <img
                 v-if="isMobile"
-                :src="type == 'service' ? '/minus.png' : '/add.png'"
+                @click="onChangeType('service')"
+                :src="type == 'product' ? '/minus.png' : '/add.png'"
                 class="footer_box_main_nav_item_title_img"
               />
             </p>
@@ -437,10 +455,20 @@ const onChangeType = (key) => {
             </div>
           </div>
           <div class="footer_box_main_nav_item">
-            <p class="footer_box_main_nav_item_title">{{t('footer.news')}}</p>
+            <NuxtLink
+              class="footer_box_main_nav_item_title"
+              to="/news"
+            >
+              {{t('footer.news')}}
+            </NuxtLink>
           </div>
           <div class="footer_box_main_nav_item">
-            <p class="footer_box_main_nav_item_title">{{t('footer.concat')}}</p>
+            <NuxtLink
+              class="footer_box_main_nav_item_title"
+              to="/concat"
+            >
+              {{t('footer.concat')}}
+            </NuxtLink>
           </div>
         </div>
       </div>

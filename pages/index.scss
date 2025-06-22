@@ -479,6 +479,20 @@
           background: #0a6250;
         }
       }
+      &_box4 {
+        &_title {
+          color: #ffffff;
+          margin-bottom: 0rem;
+          font-size: 1.2rem;
+        }
+        &_desc {
+          color: #ffffff;
+          font-size: 1.8rem;
+          text-align: center;
+          font-weight: bold;
+          margin-bottom: 0rem;
+        }
+      }
     }
     &_forest {
       position: relative;
