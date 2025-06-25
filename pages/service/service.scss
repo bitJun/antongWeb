@@ -224,10 +224,21 @@
     }
   }
   &_tip {
+    padding-top: 2rem;
     text-align: center;
     font-size: 1.8rem;
     color: #323232;
     margin: 2rem 0;
+    position: relative;
+  }
+  &_tip::before {
+    content: '';
+    width: calc(100% - 16rem);
+    height: 1px;
+    background: #ffffff;
+    position: absolute;
+    left: 8rem;
+    top: 0;
   }
 }
 

@@ -199,8 +199,9 @@
             class="massage_box_imgs_item"
           />
         </div>
+        <div class="massage_tip">{{t('service.tip')}}</div>
       </div>
-      <div class="massage_tip">{{t('service.tip')}}</div>
+      
     </div>
   </div>
 </template>
