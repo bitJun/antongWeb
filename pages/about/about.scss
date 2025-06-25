@@ -28,6 +28,7 @@
       font-weight: 400;
       font-size: 3.2rem;
       // line-height: 2.2rem;
+      text-align: center;
       color: #323232;
     }
     &_desc {
@@ -141,6 +142,10 @@
       }
     }
   }
+}
+.w144 {
+  width: 80rem;
+  margin: 0 auto;
 }
 .w36 {
   width: 56rem;
@@ -301,6 +306,14 @@
         }
       }
     }
+  }
+
+  .w144 {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .w36 {
+    width: 100%;
   }
 }
 
