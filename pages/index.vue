@@ -1,5 +1,5 @@
 <template>
-  <div class="home_view">
+  <div class="home_view" ref="homeViewRef">
     <swiper-container
       ref="bannerRef"
       :style="{
@@ -320,6 +320,9 @@ const bannerRef = ref(null);
 let number = 0;
 
 
+const homeViewRef = ref(null);
+let scale = 1;
+
 onMounted(()=>{
   nextTick(()=>{
     isMobile.value = isMobileDevice();
@@ -340,9 +343,20 @@ onMounted(()=>{
         number = 4;
       }
     });
-  })
+  });
 
-  onLoadData();
+  window.addEventListener('wheel', function(e) {
+    if (e.ctrlKey) {
+      e.preventDefault();
+      const delta = e.deltaY > 0 ? -0.1 : 0.1;
+      scale += delta;
+      scale = Math.max(0.5, Math.min(3, scale));
+      if (homeViewRef.value) {
+        homeViewRef.value.style.transformOrigin = `${e.pageX}px ${e.pageY}px`;
+        homeViewRef.value.style.transform = `scale(${scale})`;
+      }
+    }
+  }, { passive: false });
 });
 
 const swipers = useSwiper(bannerRef, {
@@ -395,11 +409,6 @@ const swiper = useSwiper(containerRef, {
 //     isMobile.value = isMobileDevice();
 //   });
 // }
-
-const onLoadData = async () => {
-  windowsUrl.value = await QRCode.toDataURL('https://cdn-oss.mos.me/public/mosapp/pc/MosApp-Windows-Latest.exe');
-  macUrl.value = await QRCode.toDataURL('https://cdn-oss.mos.me/public/mosapp/pc/MosApp-MacOS-Latest.dmg');
-}
 
 const isMobileDevice = () => {
   return /Mobi|Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
