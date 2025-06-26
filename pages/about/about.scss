@@ -3,8 +3,11 @@
   &_section {
     position: relative;
     &_img {
-      width: 192rem;
-      height: 68.6rem;
+      // width: 192rem;
+      // height: 68.6rem;
+
+      width: 100%;
+      height: auto;
     }
     &_main {
       position: absolute;

@@ -4,8 +4,11 @@
     width: 100%;
     position: relative;
     &_img {
-      width: 192rem;
-      height: 68.5rem;
+      // width: 192rem;
+      // height: 68.5rem;
+
+      width: 100%;
+      height: auto;
     }
     &_desc {
       position: absolute;

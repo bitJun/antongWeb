@@ -8,9 +8,12 @@
     width: 100%;
     position: relative;
     &_img {
-      width: 192rem;
-      height: 68.5rem;
+      // width: 192rem; 
+      // height: 68.5rem;
+      width: 100%;
+      height: auto;
       object-fit: cover;
+
     }
     &_box {
       position: absolute;
@@ -279,16 +282,20 @@
         }
       }
       &_img {
-        width: 95.8rem;
-        height: 61.3rem;
+        // width: 95.8rem;
+        // height: 61.3rem;
+        width: 100%;
+        height: auto;
       }
     }
   }
   &_service {
     position: relative;
     &_img {
-      width: 192rem;
-      height: 68.52rem;
+      // width: 192rem;
+      // height: 68.52rem;
+      width: 100%;
+      height: auto;
     }
     &_main {
       position: absolute;

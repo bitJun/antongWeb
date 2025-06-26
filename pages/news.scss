@@ -3,8 +3,11 @@
   &_section {
     position: relative;
     &_img {
-      width: 192rem;
-      height: 60rem;
+      // width: 192rem;
+      // height: 60rem;
+
+      width: 100%;
+      height: auto;
     }
     &_main {
       padding-top: 10rem;
